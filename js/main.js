@@ -1,13 +1,7 @@
-const themeToggle = document.getElementById('theme-toggle');
+const titles = document.querySelectorAll('.interactive-title');
 
-themeToggle.addEventListener('click', () => {
-
-    document.body.classList.toggle('dark');
-
-    if (document.body.classList.contains('dark')) {
-        themeToggle.textContent = '☀️';
-    } else {
-        themeToggle.textContent = '🌙';
-    }
-
+titles.forEach(title => {
+    title.addEventListener('click', () => {
+        title.classList.add('paused');
+    });
 });
